@@ -1,0 +1,115 @@
+# GoReleaser configuration
+# Docs: https://goreleaser.com
+
+version: 2
+
+project_name: mk
+
+# ── Build ──────────────────────────────────────────────────
+builds:
+  - binary: mk
+    main: .
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
+      - -X github.com/axliupore/mk/cmd.Version={{.Version}}
+      - -X github.com/axliupore/mk/cmd.Commit={{.Commit}}
+      - -X github.com/axliupore/mk/cmd.Date={{.Date}}
+
+# ── Archives ───────────────────────────────────────────────
+archives:
+  - name_template: >-
+      {{ .ProjectName }}_
+      {{- .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else }}{{ .Arch }}{{ end }}
+    formats:
+      - tar.gz
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    files:
+      - LICENSE*
+      - README*
+
+# ── Checksum ───────────────────────────────────────────────
+checksum:
+  name_template: "checksums.txt"
+
+# ── Snapshot (for dev/test builds) ────────────────────────
+snapshot:
+  version_template: "{{ incpatch .Version }}-next"
+
+# ── Changelog ──────────────────────────────────────────────
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^ci:"
+      - "^chore:"
+      - "^style:"
+  groups:
+    - title: "🚀 Features"
+      regexp: "^.*feat[(\\w)]*:+.*$"
+      order: 0
+    - title: "🐛 Bug Fixes"
+      regexp: "^.*fix[(\\w)]*:+.*$"
+      order: 1
+    - title: "📦 Others"
+      order: 999
+
+# ── Homebrew Tap ──────────────────────────────────────────
+brews:
+  - repository:
+      owner: axliupore
+      name: homebrew-tap
+    homepage: https://github.com/axliupore/mk
+    description: "Minimalist API key management CLI powered by system Keychain"
+    install: |
+      bin.install "mk"
+    test: |
+      system "#{bin}/mk", "--help"
+
+# ── Linux packages (deb / rpm / apk) ─────────────────────
+nfpms:
+  - maintainer: axliupore <axliupore@users.noreply.github.com>
+    description: "Minimalist API key management CLI powered by system Keychain"
+    homepage: https://github.com/axliupore/mk
+    license: MIT
+    formats:
+      - deb
+      - rpm
+      - apk
+    dependencies:
+      - dbus
+    recommends:
+      - gnome-keyring
+      - libsecret-tools
+
+# ── Windows Scoop ─────────────────────────────────────────
+scoops:
+  - repository:
+      owner: axliupore
+      name: scoop-bucket
+    homepage: https://github.com/axliupore/mk
+    description: "Minimalist API key management CLI powered by system Keychain"
+    license: MIT
+
+# ── GitHub Release ────────────────────────────────────────
+release:
+  github:
+    owner: axliupore
+    name: mk
+  draft: false
+  prerelease: auto
+  name_template: "v{{ .Version }}"

@@ -1,0 +1,21 @@
+# Binaries
+mk
+mk.exe
+
+# Build output
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+.trae/
+
+# Go
+vendor/

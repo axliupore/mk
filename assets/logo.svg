@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="44%" r="30%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="vaultFill" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#0F172A"/>
+
+  <!-- Glow behind keyhole -->
+  <circle cx="256" cy="220" r="80" fill="url(#glow)"/>
+
+  <!-- Outer protective rings (noise-modulated) -->
+  <path d="M256 72 Q310 74, 358 98 Q406 122, 434 170 Q462 218, 464 272 Q466 326, 442 374 Q418 422, 374 446 Q330 470, 272 468 Q214 466, 168 440 Q122 414, 98 368 Q74 322, 76 264 Q78 206, 104 158 Q130 110, 178 88 Q226 66, 256 72Z"
+        stroke="#06B6D4" stroke-opacity="0.2" stroke-width="2.2" fill="none"/>
+  <path d="M256 100 Q302 102, 340 120 Q378 138, 400 174 Q422 210, 424 256 Q426 302, 408 342 Q390 382, 354 404 Q318 426, 270 424 Q222 422, 184 402 Q146 382, 126 344 Q106 306, 108 256 Q110 206, 130 168 Q150 130, 188 112 Q226 94, 256 100Z"
+        stroke="#06B6D4" stroke-opacity="0.28" stroke-width="1.8" fill="none"/>
+  <path d="M256 128 Q294 130, 324 144 Q354 158, 370 186 Q386 214, 388 252 Q390 290, 376 322 Q362 354, 336 374 Q310 394, 272 392 Q234 390, 204 372 Q174 354, 158 324 Q142 294, 144 252 Q146 210, 162 180 Q178 150, 208 134 Q238 118, 256 128Z"
+        stroke="#06B6D4" stroke-opacity="0.35" stroke-width="1.4" fill="none"/>
+  <path d="M256 156 Q286 158, 310 168 Q334 178, 346 200 Q358 222, 360 250 Q362 278, 352 304 Q342 330, 322 348 Q302 366, 274 364 Q246 362, 224 348 Q202 334, 190 308 Q178 282, 180 250 Q182 218, 196 194 Q210 170, 234 158 Q258 146, 256 156Z"
+        stroke="#06B6D4" stroke-opacity="0.45" stroke-width="1.0" fill="none"/>
+
+  <!-- Angular fragments -->
+  <path d="M256 148 L268 148 L336 88 L322 84Z" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-opacity="0.3" stroke-width="0.8"/>
+  <path d="M256 148 L256 162 L348 200 L346 186Z" fill="#06B6D4" fill-opacity="0.06" stroke="#06B6D4" stroke-opacity="0.25" stroke-width="0.8"/>
+  <path d="M256 148 L244 154 L168 108 L180 98Z" fill="#06B6D4" fill-opacity="0.07" stroke="#06B6D4" stroke-opacity="0.28" stroke-width="0.8"/>
+  <path d="M256 148 L250 160 L156 220 L162 206Z" fill="#06B6D4" fill-opacity="0.05" stroke="#06B6D4" stroke-opacity="0.22" stroke-width="0.8"/>
+  <path d="M256 148 L262 158 L352 310 L340 306Z" fill="#06B6D4" fill-opacity="0.04" stroke="#06B6D4" stroke-opacity="0.18" stroke-width="0.8"/>
+  <path d="M256 148 L248 156 L160 316 L170 308Z" fill="#06B6D4" fill-opacity="0.05" stroke="#06B6D4" stroke-opacity="0.2" stroke-width="0.8"/>
+
+  <!-- Subtle radial lines -->
+  <g stroke="#06B6D4" stroke-opacity="0.08" stroke-width="0.6">
+    <line x1="256" y1="196" x2="256" y2="100"/>
+    <line x1="256" y1="196" x2="352" y2="148"/>
+    <line x1="256" y1="196" x2="160" y2="148"/>
+    <line x1="256" y1="196" x2="388" y2="256"/>
+    <line x1="256" y1="196" x2="124" y2="256"/>
+    <line x1="256" y1="196" x2="352" y2="364"/>
+    <line x1="256" y1="196" x2="160" y2="364"/>
+    <line x1="256" y1="196" x2="256" y2="412"/>
+    <line x1="256" y1="196" x2="320" y2="108"/>
+    <line x1="256" y1="196" x2="192" y2="108"/>
+    <line x1="256" y1="196" x2="374" y2="200"/>
+    <line x1="256" y1="196" x2="138" y2="200"/>
+  </g>
+
+  <!-- Central vault circle -->
+  <circle cx="256" cy="256" r="108" fill="url(#vaultFill)"/>
+  <circle cx="256" cy="256" r="108" stroke="#06B6D4" stroke-opacity="0.6" stroke-width="2.2" fill="none"/>
+
+  <!-- Keyhole -->
+  <circle cx="256" cy="224" r="28" fill="#22D3EE" fill-opacity="0.85"/>
+  <rect x="240" y="240" width="32" height="52" rx="16" fill="#22D3EE" fill-opacity="0.85"/>
+  <circle cx="256" cy="224" r="12" fill="#0F172A"/>
+  <circle cx="256" cy="224" r="28" stroke="#22D3EE" stroke-opacity="0.9" stroke-width="1.8" fill="none"/>
+
+  <!-- Decorative dots on rings -->
+  <g fill="#22D3EE">
+    <circle cx="310" cy="82" r="2.2" fill-opacity="0.5"/>
+    <circle cx="440" cy="200" r="1.8" fill-opacity="0.4"/>
+    <circle cx="420" cy="370" r="2.5" fill-opacity="0.35"/>
+    <circle cx="280" cy="460" r="2.0" fill-opacity="0.3"/>
+    <circle cx="140" cy="400" r="2.3" fill-opacity="0.4"/>
+    <circle cx="80" cy="260" r="1.8" fill-opacity="0.45"/>
+    <circle cx="120" cy="120" r="2.0" fill-opacity="0.35"/>
+    <circle cx="200" cy="76" r="1.6" fill-opacity="0.4"/>
+    <circle cx="370" cy="100" r="1.5" fill-opacity="0.3"/>
+    <circle cx="460" cy="300" r="2.0" fill-opacity="0.25"/>
+    <circle cx="350" cy="440" r="1.8" fill-opacity="0.3"/>
+    <circle cx="180" cy="440" r="2.2" fill-opacity="0.25"/>
+    <circle cx="90" cy="340" r="1.6" fill-opacity="0.35"/>
+    <circle cx="100" cy="180" r="2.0" fill-opacity="0.3"/>
+    <circle cx="340" cy="72" r="1.4" fill-opacity="0.35"/>
+    <circle cx="456" cy="248" r="1.8" fill-opacity="0.2"/>
+    <circle cx="396" cy="420" r="2.0" fill-opacity="0.2"/>
+    <circle cx="240" cy="466" r="1.6" fill-opacity="0.25"/>
+    <circle cx="110" cy="380" r="1.8" fill-opacity="0.3"/>
+    <circle cx="76" cy="220" r="2.0" fill-opacity="0.35"/>
+  </g>
+</svg>
