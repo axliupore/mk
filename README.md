@@ -15,7 +15,7 @@
 
 <p align="center">
   <a href="https://github.com/axliupore/mk/releases"><img src="https://img.shields.io/github/v/release/axliupore/mk?style=flat-square&color=06B6D4" alt="Release"></a>
-  <a href="https://github.com/axliupore/mk/releases"><img src="https://img.shields.io/github/downloads/axliupore/mk/total?style=flat-square&color=06B6D4" alt="Downloads"></a>
+  <a href="https://github.com/axliupore/mk/releases"><img src="https://img.shields.io/github/downloads/axliupore/mk/total?style=flat-square&color=06B6D4&label=downloads&cacheSeconds=300" alt="Downloads"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/axliupore/mk?style=flat-square" alt="License"></a>
   <a href="https://go.dev"><img src="https://img.shields.io/badge/Go-1.26-00ADD8?style=flat-square&logo=go" alt="Go Version"></a>
   <a href="https://github.com/axliupore/mk/releases"><img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux%20%7C%20Windows-999?style=flat-square" alt="Platform"></a>
@@ -69,7 +69,7 @@ $ mk rm openai
 
 ```bash
 brew tap axliupore/tap
-brew install mk
+brew install axliupore/tap/mk
 ```
 
 ### Linux
